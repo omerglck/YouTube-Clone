@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { IoIosNotifications } from "react-icons/io";
 import { RiVideoAddLine } from "react-icons/ri";
@@ -8,7 +8,14 @@ import { YouTubeContext } from "../context/youTubeContext";
 
 const Header = () => {
   const { toggleButton, setToggleButton } = useContext(YouTubeContext);
+  const navigate = useNavigate();
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+    let inputValue = e.target[0].value;
+
+    navigate(`/results?search_query=${inputValue}`);
+  };
   return (
     <header className="flex justify-between items-center p-[16px] bg-[#0F0F0F] text-white">
       <div className="flex items-center gap-4">
@@ -23,7 +30,7 @@ const Header = () => {
           <h1 className="md:text-3xl">YouTube</h1>
         </Link>
       </div>
-      <form className="relative">
+      <form className="relative" onSubmit={handleSearch}>
         <input
           type="text"
           className="lg:w-[500px] md:w-[350px] sm:w-[200px] bg-[#0F0F0F] py-1 outline-none border position-relative border-gray-500 rounded-[15px] focus:outline focus:outline-blue-300"

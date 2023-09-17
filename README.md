@@ -1,14 +1,14 @@
 # YouTube-Clone
 
-## Yapılanlar
+- Bu projede React.js kullanılarak geliştirildi.
 
-- `SideNav.jsx` içerisinde kategorileri listele
+- Youtube da olduğu gibi açılır kapanır menü yapıldı.
 
-- Seçilen kategorinin bilgisini context yapısında tut.
+- Kategori bilgileri context yapısında tutuldu.
 
-- Her yeni kategori seçildiğinde o kategori ile ilgili videoları al.
+- Seçilen kategoriye göre o kategori ile ilgili videolar ekrana aktarıldı.
 
-- Çektiğimiz videoları `Feed.jsx` içerisinde her video için bir video kartı bas.
+- Video detay sayfası yapıldı.
 
 ## Kütüphaneler
 
@@ -25,3 +25,11 @@
 - react-player
 
 - tailwind
+
+## Kaynaklar
+
+- https://rapidapi.com/Glavier/api/youtube138/
+
+## Gif
+
+<img src="./public/screen.gif" />
